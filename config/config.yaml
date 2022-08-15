@@ -1,0 +1,18 @@
+defaults:
+  - model: seq2seq
+  - vocab: vocab
+  - data: data
+
+seed: 1024
+device: cpu
+n_epoch: 100
+batch_size: 32
+val_batch_size: 4
+
+optim:
+  args:
+    lr: 0.0
+    weight_decay: 0.1
+  scheduler:
+    max_lr: 0.001
+    pct_start: 0.3

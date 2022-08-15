@@ -1,0 +1,14 @@
+
+encoder:
+  vocab_size: 26
+  embedding_size: 32
+  hidden_size: 64
+  num_layer: 3
+  dropout: 0.1
+
+decoder:  
+  vocab_size: 26
+  embedding_size: 32
+  hidden_size: 64
+  num_layer: 2
+  dropout: 0.1
