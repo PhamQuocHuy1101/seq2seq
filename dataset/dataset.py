@@ -12,6 +12,9 @@ class Vocab:
         self.start_token = 1
         self.end_token = 2
 
+    def __len__(self):
+        return len(self.char2token)
+    
     def __getitem__(self, idx):
         return self.char2token.get(idx, None) if type(idx) == str else self.token2char.get(idx, None)
 

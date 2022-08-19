@@ -1,14 +1,16 @@
 
 encoder:
   vocab_size: 26
-  embedding_size: 32
-  hidden_size: 64
-  num_layer: 3
-  dropout: 0.1
+  embedding_size: 512
+  hidden_size: 256
+  num_layer: 4
+  dropout: 0.2
+  use_bid: False
 
 decoder:  
   vocab_size: 26
-  embedding_size: 32
-  hidden_size: 64
-  num_layer: 2
-  dropout: 0.1
+  embedding_size: 512
+  hidden_size: 256
+  num_layer: 8
+  dropout: 0.2
+  use_bid: False

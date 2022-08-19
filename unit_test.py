@@ -15,9 +15,10 @@ out_enc, state_enc = encoder(inputs)
 print("Encode")
 print(out_enc.shape, state_enc[0].shape, state_enc[1].shape)
 
-init_state = state_enc[1][-1].repeat(2*num_decode_layer, 1, 1)
-dec_state = (torch.ones_like(init_state), init_state)
-out_dec, state_dec = decoder(inputs, dec_state)
+# init_state = state_enc[1][-1].repeat(2*num_decode_layer, 1, 1)
+inputs2= torch.tensor([[0], [0]])
+dec_state = decoder.init_state(state_enc[1][-1])
+out_dec, state_dec = decoder(inputs2, dec_state)
 print("Decode")
 print(out_dec.shape, state_dec[0].shape, state_dec[1].shape)
 

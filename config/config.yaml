@@ -3,16 +3,18 @@ defaults:
   - vocab: vocab
   - data: data
 
-seed: 1024
+seed: 42
 device: cpu
-n_epoch: 100
-batch_size: 32
-val_batch_size: 4
+n_epoch: 1000
+batch_size: 48
+val_batch_size: 32
 
 optim:
   args:
     lr: 0.0
     weight_decay: 0.1
   scheduler:
-    max_lr: 0.001
-    pct_start: 0.3
+    max_lr: 0.01
+    pct_start: 0.1
+
+checkpoint: 'seq2seq.pt'
